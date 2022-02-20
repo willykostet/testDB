@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   mysql:
-    image: mysql:5.7
+    image: mysql
     restart: always
     environment:
       MYSQL_DATABASE: ${DB_NAME}
@@ -9,12 +9,6 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
     ports:
-        - "${APP_PORT}"
+      - "${APP_PORT}"
     expose:
-       - "${APP_PORT}"
-
-  # postgress:
-  #   ports:
-  #     -
-  #   environment:
-  #     - name=value
+      - "${APP_PORT}"
